@@ -1,0 +1,27 @@
+Utilities/HTMLToPDF/PDFPageClient.cpp
+  c40f11f413e27b24 17,89,93,99-100,102-120
+Utilities/HTMLToPDF/PDFPageClient.h
+  c40f11f413e27b24 44,53-54
+Utilities/HTMLToPDF/html-to-pdf.cpp
+  c40f11f413e27b24 36-38,45,50-52,82-83,85,89-93,104,108-114,126-135,137,140-150,156,158-162
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "17173535fdbcbf654c80f9118a35a7f56663a0bf",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 135,
+      "total_deletions": 78,
+      "accepted_lines": 81,
+      "overriden_lines": 0
+    }
+  }
+}

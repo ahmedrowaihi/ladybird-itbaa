@@ -1,0 +1,37 @@
+Utilities/HTMLToPDF/PDFPageClient.cpp
+  c40f11f413e27b24 1-85,89,93,99-156
+Utilities/HTMLToPDF/html-to-pdf.cpp
+  c40f11f413e27b24 1-66,75,77-104,108-114,122-135,137,140-150,152-178
+ARCHITECTURE_SUMMARY.md
+  c40f11f413e27b24 1-36,42,44-53,58-59,64-66,68-73,78-80,82-116,121-140,145-151,153-165,169,171-175,179-180,184-190,192-210,215,217-227,232-233,237-249
+CMakePresets.json
+  c40f11f413e27b24 209-220,315-321
+Utilities/CMakeLists.txt
+  c40f11f413e27b24 25-53
+vcpkg.json
+  c40f11f413e27b24 219-223
+HTML_TO_PDF_IMPLEMENTATION_GUIDE.md
+  c40f11f413e27b24 1-141,143-147,149,151-159,165-304,306-595,597-720,722-728,730-731,733-961
+Utilities/HTMLToPDF/PDFPageClient.h
+  c40f11f413e27b24 44,53-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "6350b063ab72d014acac0cdba1064893d4910d9b",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 135,
+      "total_deletions": 78,
+      "accepted_lines": 81,
+      "overriden_lines": 0
+    }
+  }
+}

@@ -1,0 +1,27 @@
+Utilities/HTMLToPDF/html-to-pdf.cpp
+  c40f11f413e27b24 6,12-13,18,21,26,30,34,122-135,140,142-143
+Utilities/CMakeLists.txt
+  c40f11f413e27b24 30,41,44-48
+Utilities/HTMLToPDF/PDFPageClient.cpp
+  c40f11f413e27b24 122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "65e1e2dc554bb53d38d2ae22966d5465767adf7f",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 33,
+      "overriden_lines": 0
+    }
+  }
+}

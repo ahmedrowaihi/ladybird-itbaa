@@ -1,0 +1,25 @@
+Utilities/CMakeLists.txt
+  c40f11f413e27b24 25,27-28,30-31,33-43,45,56-65,67,69,73-79,120-125,129,143
+Utilities/Itbaa/lib/Renderer.cpp
+  c40f11f413e27b24 1-343
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "e1890fb0f7cb22ea3c9041330f0c2c3f2abe1114",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 374,
+      "total_deletions": 31,
+      "accepted_lines": 387,
+      "overriden_lines": 0
+    }
+  }
+}

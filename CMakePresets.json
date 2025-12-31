@@ -206,6 +206,32 @@
           "toolchain": "Swift"
         }
       }
+    },
+    {
+      "name": "Itbaa",
+      "inherits": "unix_base",
+      "displayName": "Itbaa (اطبع) Build",
+      "description": "Itbaa - HTML to PDF conversion library and CLI",
+      "binaryDir": "${fileDir}/Build/itbaa",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "ENABLE_QT": "OFF",
+        "ENABLE_GUI_TARGETS": "ON"
+      }
+    },
+    {
+      "name": "Itbaa_Static",
+      "inherits": "unix_base",
+      "displayName": "Itbaa (اطبع) Static Build",
+      "description": "Itbaa - Static distribution build",
+      "binaryDir": "${fileDir}/Build/itbaa-static",
+      "cacheVariables": {
+        "BUILD_SHARED_LIBS": "OFF",
+        "CMAKE_BUILD_TYPE": "Release",
+        "ENABLE_QT": "OFF",
+        "ENABLE_GUI_TARGETS": "ON",
+        "VCPKG_OVERLAY_TRIPLETS": "${fileDir}/Meta/CMake/vcpkg/distribution-triplets"
+      }
     }
   ],
   "buildPresets": [
@@ -300,6 +326,20 @@
       "configurePreset": "Swift_Release",
       "displayName": "Swift Release Build",
       "description": "Build the project for Swift release on Unix"
+    },
+    {
+      "name": "Itbaa",
+      "inherits": "unix_base",
+      "configurePreset": "Itbaa",
+      "displayName": "Itbaa Build",
+      "description": "Build Itbaa HTML to PDF library and CLI"
+    },
+    {
+      "name": "Itbaa_Static",
+      "inherits": "unix_base",
+      "configurePreset": "Itbaa_Static",
+      "displayName": "Itbaa Static Build",
+      "description": "Build Itbaa with static linking for distribution"
     }
   ],
   "testPresets": [

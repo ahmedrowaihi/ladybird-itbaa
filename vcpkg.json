@@ -172,7 +172,8 @@
         "metal",
         "fontconfig",
         "harfbuzz",
-        "icu"
+        "icu",
+        "pdf"
       ]
     },
     {
@@ -183,6 +184,7 @@
         "freetype",
         "harfbuzz",
         "icu",
+        "pdf",
         "vulkan"
       ]
     },
@@ -195,6 +197,7 @@
         "fontconfig",
         "harfbuzz",
         "icu",
+        "pdf",
         "vulkan"
       ]
     },
@@ -216,7 +219,11 @@
     },
     "vulkan-headers",
     "woff2",
-    "zlib"
+    "zlib",
+    {
+      "name": "libharu",
+      "platform": "osx | linux | windows"
+    }
   ],
   "overrides": [
     {

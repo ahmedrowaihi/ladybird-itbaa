@@ -22,6 +22,62 @@ endif()
 
 lagom_utility(test262-runner SOURCES test262-runner.cpp LIBS LibJS LibFileSystem LibGC)
 
+# ============================================================================
+# Itbaa (اطبع) - HTML to PDF Library and CLI
+# Copyright (c) 2025, sudorw <ahmedrowaihi@sudorw.com>
+# ============================================================================
+include(skia)
+
+# Itbaa Core Library (static)
+add_library(itbaa STATIC
+    Itbaa/lib/Itbaa.cpp
+    Itbaa/lib/Renderer.cpp
+    Itbaa/lib/PDFWriter.cpp
+    Itbaa/lib/DisplayListPlayerPDF.cpp
+)
+
+target_include_directories(itbaa PUBLIC 
+    ${CMAKE_CURRENT_SOURCE_DIR}/Itbaa/lib
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}/Lagom/Libraries
+)
+
+target_link_libraries(itbaa PUBLIC
+    LibWeb 
+    LibGfx 
+    LibCore 
+    LibJS
+    LibGC
+    LibIPC
+    LibURL
+    LibWebView
+    LibRequests
+    skia
+)
+
+set_target_properties(itbaa PROPERTIES
+    OUTPUT_NAME "itbaa"
+    VERSION "1.0.0"
+    SOVERSION "1"
+)
+
+# Itbaa CLI Tool
+lagom_utility(itbaa-cli
+    SOURCES 
+        Itbaa/cli/main.cpp
+    LIBS 
+        itbaa
+        LibMain
+)
+
+target_include_directories(itbaa-cli PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/Itbaa/lib
+)
+
+set_target_properties(itbaa-cli PROPERTIES
+    OUTPUT_NAME "itbaa"
+)
+
 if (CMAKE_SYSTEM_NAME STREQUAL "Linux")
     include(CheckCSourceCompiles)
     # Check for musl's declaration of __assert_fail
@@ -61,10 +117,16 @@ if (NOT CMAKE_SKIP_INSTALL_RULES)
     install(TARGETS wasm COMPONENT wasm)
     install(FILES "${GIT_COMMIT_FILE}" COMPONENT wasm DESTINATION .)
 
+    # Install Itbaa library and CLI
+    install(TARGETS itbaa-cli COMPONENT itbaa)
+    install(TARGETS itbaa COMPONENT itbaa)
+    install(FILES Itbaa/lib/Itbaa.h COMPONENT itbaa DESTINATION include)
+    install(FILES "${GIT_COMMIT_FILE}" COMPONENT itbaa DESTINATION .)
+
     set(CPACK_GENERATOR "TGZ")
     set(CPACK_STRIP_FILES TRUE)
     set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
-    set(CPACK_COMPONENTS_ALL js wasm)
+    set(CPACK_COMPONENTS_ALL js wasm itbaa)
     set(CPACK_COMPONENTS_GROUPING ONE_PER_GROUP)
     if (APPLE)
         if("arm64" IN_LIST CMAKE_OSX_ARCHITECTURES AND "x86_64" IN_LIST CMAKE_OSX_ARCHITECTURES)
@@ -78,6 +140,7 @@ if (NOT CMAKE_SKIP_INSTALL_RULES)
 
     set(CPACK_ARCHIVE_JS_FILE_NAME "ladybird-js-${CPACK_SYSTEM_NAME}")
     set(CPACK_ARCHIVE_WASM_FILE_NAME "ladybird-wasm-${CPACK_SYSTEM_NAME}")
+    set(CPACK_ARCHIVE_ITBAA_FILE_NAME "itbaa-${CPACK_SYSTEM_NAME}")
 
     include(CPack)
 endif()

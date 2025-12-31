@@ -61,3 +61,4 @@ Meta/CMake/vcpkg/user-variables.cmake
 .DS_Store
 
 __pycache__
+itbaa-dist/

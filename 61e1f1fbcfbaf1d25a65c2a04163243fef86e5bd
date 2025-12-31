@@ -1,0 +1,23 @@
+Utilities/Itbaa/lib/PDFWriter.cpp
+  c40f11f413e27b24 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "61e1f1fbcfbaf1d25a65c2a04163243fef86e5bd",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}

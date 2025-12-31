@@ -1,0 +1,33 @@
+CMakePresets.json
+  c40f11f413e27b24 209-210,212,216-220,329-330,339
+HTML_TO_PDF_IMPLEMENTATION_GUIDE.md
+  c40f11f413e27b24 1-141,143-147,149,151-159,165-304,306-595,597-720,722-728,730-731,733-961
+Utilities/Itbaa/lib/Renderer.cpp
+  c40f11f413e27b24 1-343
+Utilities/CMakeLists.txt
+  c40f11f413e27b24 25,27-31,33-43,45,56-80,120-125,129,143
+vcpkg.json
+  c40f11f413e27b24 175-176,220-224
+ARCHITECTURE_SUMMARY.md
+  c40f11f413e27b24 1-36,42,44-53,58-59,64-66,68-73,78-80,82-116,121-140,145-151,153-165,169,171-175,179-180,184-190,192-210,215,217-227,232-233,237-249
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "0cc0cef5c20ec0eb35ca032f6d904a9445b03554",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 1557,
+      "overriden_lines": 0
+    }
+  }
+}

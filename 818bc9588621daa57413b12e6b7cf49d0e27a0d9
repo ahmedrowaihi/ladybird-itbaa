@@ -1,0 +1,42 @@
+Utilities/HTMLToPDF/DisplayListPlayerPDF.cpp
+  c40f11f413e27b24 1-310
+Utilities/CMakeLists.txt
+  c40f11f413e27b24 26
+Utilities/HTMLToPDF/DisplayListPlayerPDF.h
+  c40f11f413e27b24 1-51
+vcpkg.json
+  c40f11f413e27b24 175-176
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "818bc9588621daa57413b12e6b7cf49d0e27a0d9",
+  "prompts": {
+    "96f7ed3a6e4cbb90": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "55a27a52-2c4d-403b-943b-e2c487a14819",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 215,
+      "total_deletions": 3,
+      "accepted_lines": 210,
+      "overriden_lines": 0
+    },
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 5634,
+      "total_deletions": 1408,
+      "accepted_lines": 4340,
+      "overriden_lines": 15
+    }
+  }
+}

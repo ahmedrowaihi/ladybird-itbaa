@@ -1,0 +1,23 @@
+vcpkg.json
+  c40f11f413e27b24 187,200
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.25",
+  "base_commit_sha": "cecf9e4f086eea5feb2e65548024078be10e7cea",
+  "prompts": {
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "claude-4.5-opus-high-thinking"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

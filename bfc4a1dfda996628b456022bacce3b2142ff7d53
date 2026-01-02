@@ -1,0 +1,47 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.26",
+  "base_commit_sha": "bfc4a1dfda996628b456022bacce3b2142ff7d53",
+  "prompts": {
+    "4e47e80f239dff7c": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "c108b3ff-7909-4d39-afe1-3ac2a10f855f",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1087,
+      "total_deletions": 0,
+      "accepted_lines": 1082,
+      "overriden_lines": 0
+    },
+    "a5d21a0f556b3ef9": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "dcc75d82-e50a-42ac-8bfc-79e1f0200f9e",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 2255,
+      "total_deletions": 122,
+      "accepted_lines": 2044,
+      "overriden_lines": 35
+    },
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 407,
+      "total_deletions": 249,
+      "accepted_lines": 163,
+      "overriden_lines": 0
+    }
+  }
+}

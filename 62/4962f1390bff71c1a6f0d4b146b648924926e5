@@ -1,0 +1,36 @@
+vcpkg.json
+  c40f11f413e27b24 187,200
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.26",
+  "base_commit_sha": "624962f1390bff71c1a6f0d4b146b648924926e5",
+  "prompts": {
+    "5852c7e9a0862027": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "97e529fa-d060-480c-b5bb-e9e2b140a626",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1795,
+      "total_deletions": 562,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 407,
+      "total_deletions": 249,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}

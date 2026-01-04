@@ -1,0 +1,43 @@
+Utilities/Itbaa/lib/PDFWriter.cpp
+  c40f11f413e27b24 8,10-11,13,102-104,109-110,112-114,119
+  5852c7e9a0862027 105-108,115-118
+Utilities/Itbaa/cli/main.cpp
+  c40f11f413e27b24 164-170
+Utilities/Itbaa/lib/Itbaa.cpp
+  c40f11f413e27b24 10,14-16,21-22,253-257,259-264,266,269
+vcpkg.json
+  c40f11f413e27b24 187,200
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.27",
+  "base_commit_sha": "23692ccc904f59cee10ade03c6b9c68e18904808",
+  "prompts": {
+    "5852c7e9a0862027": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "97e529fa-d060-480c-b5bb-e9e2b140a626",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1795,
+      "total_deletions": 562,
+      "accepted_lines": 8,
+      "overriden_lines": 0
+    },
+    "c40f11f413e27b24": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "fe5dfdbd-19ca-46db-90e0-74c551ab5d10",
+        "model": "default"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 407,
+      "total_deletions": 249,
+      "accepted_lines": 41,
+      "overriden_lines": 0
+    }
+  }
+}

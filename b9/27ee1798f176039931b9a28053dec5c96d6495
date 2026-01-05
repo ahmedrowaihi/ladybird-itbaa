@@ -1,0 +1,52 @@
+Libraries/LibWeb/Layout/BidiParagraph.h
+  fa2c051d5fbc9f55 71-73
+Libraries/LibWeb/Layout/BidiParagraph.cpp
+  55d2381e4c525f78 481-517
+  e9f9dbff3254dcaa 109
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.28",
+  "base_commit_sha": "b927ee1798f176039931b9a28053dec5c96d6495",
+  "prompts": {
+    "55d2381e4c525f78": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-6e5e50c9-3b9e-4449-b1df-8b854250b527",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 37,
+      "total_deletions": 0,
+      "accepted_lines": 37,
+      "overriden_lines": 0
+    },
+    "e9f9dbff3254dcaa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-525e940f-95f5-4189-8b66-a6cb78f78219",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    },
+    "fa2c051d5fbc9f55": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-0bf9ca99-46da-482c-a0c2-f0f015e01229",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 0,
+      "accepted_lines": 3,
+      "overriden_lines": 0
+    }
+  }
+}

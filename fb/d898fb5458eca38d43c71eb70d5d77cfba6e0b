@@ -1,0 +1,152 @@
+Libraries/LibWeb/Layout/BidiParagraph.h
+  fa2c051d5fbc9f55 71-73
+Libraries/LibUnicode/CharacterTypes.cpp
+  02041cd3b00e8e7e 466-518
+Libraries/LibUnicode/CharacterTypes.h
+  94bdfac7986f1dbb 76
+Libraries/LibWeb/Layout/BidiParagraph.cpp
+  5262307140d24cce 43
+  e9f9dbff3254dcaa 109
+  ec6a96b6921757cb 536,539-541
+  55d2381e4c525f78 481-517
+  43c78bb04208e24f 11-25
+  bfdf0c1c34630a1f 564
+  7ec7c05624df097d 577
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.0.29",
+  "base_commit_sha": "fbd898fb5458eca38d43c71eb70d5d77cfba6e0b",
+  "prompts": {
+    "02041cd3b00e8e7e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-56c1d65a-029e-485f-9c66-9ca984794620",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 53,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "43c78bb04208e24f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-61cdbdcd-cefe-4ed1-a171-c2625f6ba54b",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 20,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "5262307140d24cce": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-353f4877-13f9-4eb9-b950-3b1e836e9cfb",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "55d2381e4c525f78": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-6e5e50c9-3b9e-4449-b1df-8b854250b527",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 37,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "7ec7c05624df097d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-20d6d4c9-be33-463e-8b42-e229938384fc",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "94bdfac7986f1dbb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-6320b4f2-3ccb-4f33-b4c3-1032f37e053b",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "bfdf0c1c34630a1f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-4a783ca3-755f-4c69-84ae-d29415817592",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "e9f9dbff3254dcaa": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-525e940f-95f5-4189-8b66-a6cb78f78219",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "ec6a96b6921757cb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-9f229f99-3bf4-4abb-8907-694ea24341c9",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 2,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    },
+    "fa2c051d5fbc9f55": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "opencode-transcript-ses_47191ae4dffe7qxPhLniVfSftZ-0bf9ca99-46da-482c-a0c2-f0f015e01229",
+        "model": "unknown"
+      },
+      "human_author": "ahmedrowaihi <ahmedrowaihi1@gmail.com>",
+      "messages": [],
+      "total_additions": 3,
+      "total_deletions": 0,
+      "accepted_lines": 0,
+      "overriden_lines": 0
+    }
+  }
+}

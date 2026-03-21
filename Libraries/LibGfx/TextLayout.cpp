@@ -41,10 +41,19 @@ NonnullRefPtr<GlyphRun> GlyphRun::slice(size_t start, size_t length) const
     Vector<DrawGlyph> sliced_glyphs;
     sliced_glyphs.ensure_capacity(length);
 
+    float min_x = (length > 0) ? m_glyphs[start].position.x() : 0.0f;
     float width = 0;
     for (size_t i = start; i < start + length; ++i) {
         sliced_glyphs.unchecked_append(m_glyphs[i]);
         width += m_glyphs[i].glyph_width;
+        if (m_glyphs[i].position.x() < min_x)
+            min_x = m_glyphs[i].position.x();
+    }
+
+    // Normalize glyph positions so the sub-run starts at x=0.
+    if (min_x != 0.0f) {
+        for (auto& glyph : sliced_glyphs)
+            glyph.position.set_x(glyph.position.x() - min_x);
     }
 
     return adopt_ref(*new GlyphRun(move(sliced_glyphs), m_font, m_text_type, width));

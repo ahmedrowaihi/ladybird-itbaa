@@ -86,6 +86,7 @@ private:
         bool should_wrap_lines {};
         bool should_respect_linebreaks {};
         Optional<Gfx::GlyphRun::TextType> last_known_direction {};
+        Optional<Gfx::GlyphRun::TextType> forced_text_type {};
     };
 
     Optional<TextNodeContext> m_text_node_context;

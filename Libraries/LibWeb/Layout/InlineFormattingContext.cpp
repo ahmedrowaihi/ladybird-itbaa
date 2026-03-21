@@ -7,12 +7,14 @@
 #include <LibWeb/CSS/Length.h>
 #include <LibWeb/DOM/Node.h>
 #include <LibWeb/Dump.h>
+#include <LibWeb/Layout/BidiParagraph.h>
 #include <LibWeb/Layout/BlockContainer.h>
 #include <LibWeb/Layout/BlockFormattingContext.h>
 #include <LibWeb/Layout/Box.h>
 #include <LibWeb/Layout/InlineFormattingContext.h>
 #include <LibWeb/Layout/InlineLevelIterator.h>
 #include <LibWeb/Layout/LineBuilder.h>
+#include <LibWeb/Layout/TextNode.h>
 
 namespace Web::Layout {
 
@@ -485,9 +487,52 @@ void InlineFormattingContext::generate_line_boxes()
         }
     }
 
+    auto paragraph_direction = containing_block().computed_values().direction();
+
+    // Trim logical trailing whitespace before bidi reordering.
+    // This removes trailing whitespace in logical order (which for RTL paragraphs
+    // would otherwise become visual-leading after reversal, appearing incorrectly).
     for (auto& line_box : line_boxes)
         line_box.trim_trailing_whitespace();
 
+    // UAX#9 paragraph-level bidi reordering for proper RTL text with inline elements.
+    for (size_t box_index = 0; box_index < line_boxes.size(); ++box_index) {
+        auto& line_box = line_boxes[box_index];
+        if (line_box.fragments().is_empty())
+            continue;
+
+        auto paragraph_unicode_bidi = containing_block().computed_values().unicode_bidi();
+        BidiParagraph paragraph(paragraph_direction, paragraph_unicode_bidi);
+
+        for (size_t fragment_index = 0; fragment_index < line_box.fragments().size(); ++fragment_index) {
+            auto const& fragment = line_box.fragments()[fragment_index];
+            auto const& node = fragment.layout_node();
+            auto fragment_direction = node.computed_values().direction();
+            auto fragment_unicode_bidi = node.computed_values().unicode_bidi();
+
+            if (auto const* text_node = as_if<TextNode>(node)) {
+                auto text = text_node->text_for_rendering().substring_view(fragment.start(), fragment.length_in_code_units());
+                paragraph.add_fragment(fragment_index, text, fragment_direction, fragment_unicode_bidi);
+            } else {
+                paragraph.add_atomic_inline(fragment_index, fragment_direction, fragment_unicode_bidi);
+            }
+        }
+
+        paragraph.resolve_levels();
+        auto sub_fragments = paragraph.reordered_sub_fragments();
+
+        line_box.reorder_and_split_fragments(sub_fragments);
+    }
+
+    // For RTL, trim trailing whitespace after bidi reordering.
+    // After reordering, the visual "end" of the line (right side for RTL reading)
+    // is now the last fragment in the array.
+    if (paragraph_direction == CSS::Direction::Rtl) {
+        for (auto& line_box : line_boxes)
+            line_box.trim_trailing_whitespace();
+    }
+
+    // Ellipsis is placed at the visual line end, so it must run after bidi reordering.
     apply_text_overflow_ellipsis(line_boxes);
 
     auto const& containing_block = this->containing_block();

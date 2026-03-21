@@ -7,6 +7,8 @@
 #pragma once
 
 #include <AK/Vector.h>
+#include <LibWeb/Layout/AvailableSpace.h>
+#include <LibWeb/Layout/BidiParagraph.h>
 #include <LibWeb/Layout/LineBoxFragment.h>
 
 namespace Web::Layout {
@@ -52,6 +54,8 @@ public:
     Vector<StaticPositionMarker>& static_position_markers() { return m_static_position_markers; }
 
     CSSPixels get_trailing_whitespace_width() const;
+    void reorder_fragments(Vector<size_t> const& visual_order);
+    void reorder_and_split_fragments(Vector<BidiSubFragment> const& sub_fragments);
     void trim_trailing_whitespace();
     void clamp_static_position_markers_to_inline_length();
 

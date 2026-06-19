@@ -25,6 +25,8 @@ public:
     String selector_text() const;
     void set_selector_text(StringView);
 
+    PageSelectorList const& selectors() const { return m_selectors; }
+
     GC::Ref<CSSPageDescriptors> style() { return m_style; }
     GC::Ref<CSSPageDescriptors const> descriptors() const { return m_style; }
 

@@ -1128,6 +1128,31 @@ WordBreak ComputedProperties::word_break() const
     return keyword_to_word_break(value.to_keyword()).release_value();
 }
 
+BreakBefore ComputedProperties::break_before() const
+{
+    return keyword_to_break_before(property(PropertyID::BreakBefore).to_keyword()).release_value();
+}
+
+BreakAfter ComputedProperties::break_after() const
+{
+    return keyword_to_break_after(property(PropertyID::BreakAfter).to_keyword()).release_value();
+}
+
+BreakInside ComputedProperties::break_inside() const
+{
+    return keyword_to_break_inside(property(PropertyID::BreakInside).to_keyword()).release_value();
+}
+
+int ComputedProperties::orphans() const
+{
+    return property(PropertyID::Orphans).as_integer().integer();
+}
+
+int ComputedProperties::widows() const
+{
+    return property(PropertyID::Widows).as_integer().integer();
+}
+
 CSSPixels ComputedProperties::word_spacing() const
 {
     auto const& value = property(PropertyID::WordSpacing);

@@ -175,6 +175,9 @@ public:
     static CaptionSide caption_side() { return CaptionSide::Top; }
     static Color caret_color() { return Color::Black; }
     static Clear clear() { return Clear::None; }
+    static BreakBefore break_before() { return BreakBefore::Auto; }
+    static BreakAfter break_after() { return BreakAfter::Auto; }
+    static BreakInside break_inside() { return BreakInside::Auto; }
     static Clip clip() { return Clip::make_auto(); }
     static ColorInterpolation color_interpolation() { return ColorInterpolation::Auto; }
     static PreferredColorScheme color_scheme() { return PreferredColorScheme::Auto; }
@@ -302,6 +305,8 @@ public:
     static MathShift math_shift() { return MathShift::Normal; }
     static MathStyle math_style() { return MathStyle::Normal; }
     static int math_depth() { return 0; }
+    static int orphans() { return 2; }
+    static int widows() { return 2; }
 
     static ScrollbarColorData scrollbar_color()
     {
@@ -544,6 +549,9 @@ public:
     CaptionSide caption_side() const { return m_inherited.caption_side; }
     Color caret_color() const { return m_inherited.caret_color; }
     Clear clear() const { return m_noninherited.clear; }
+    BreakBefore break_before() const { return m_noninherited.break_before; }
+    BreakAfter break_after() const { return m_noninherited.break_after; }
+    BreakInside break_inside() const { return m_noninherited.break_inside; }
     Clip clip() const { return m_noninherited.clip; }
     ColorInterpolation color_interpolation() const { return m_inherited.color_interpolation; }
     PreferredColorScheme color_scheme() const { return m_inherited.color_scheme; }
@@ -757,6 +765,8 @@ public:
     MathShift math_shift() const { return m_inherited.math_shift; }
     MathStyle math_style() const { return m_inherited.math_style; }
     int math_depth() const { return m_inherited.math_depth; }
+    int orphans() const { return m_inherited.orphans; }
+    int widows() const { return m_inherited.widows; }
 
     ScrollbarColorData scrollbar_color() const { return m_inherited.scrollbar_color; }
     ScrollbarWidth scrollbar_width() const { return m_noninherited.scrollbar_width; }
@@ -831,6 +841,8 @@ protected:
         LengthPercentage stroke_width { InitialValues::stroke_width() };
         Vector<ShadowData> text_shadow;
         int math_depth { InitialValues::math_depth() };
+        int orphans { InitialValues::orphans() };
+        int widows { InitialValues::widows() };
         ScrollbarColorData scrollbar_color { InitialValues::scrollbar_color() };
         float stroke_opacity { InitialValues::stroke_opacity() };
     };
@@ -841,6 +853,9 @@ protected:
         AspectRatio aspect_ratio { InitialValues::aspect_ratio() };
         Float float_ { InitialValues::float_() };
         Clear clear { InitialValues::clear() };
+        BreakBefore break_before { InitialValues::break_before() };
+        BreakAfter break_after { InitialValues::break_after() };
+        BreakInside break_inside { InitialValues::break_inside() };
         TextOverflow text_overflow { InitialValues::text_overflow() };
         Positioning position { InitialValues::position() };
         Optional<FlyString> position_anchor { InitialValues::position_anchor() };
@@ -1004,6 +1019,9 @@ public:
     void set_mask_layers(Vector<BackgroundLayerData>&& layers) { m_noninherited.mask_layers = move(layers); }
     void set_float(Float value) { m_noninherited.float_ = value; }
     void set_clear(Clear value) { m_noninherited.clear = value; }
+    void set_break_before(BreakBefore value) { m_noninherited.break_before = value; }
+    void set_break_after(BreakAfter value) { m_noninherited.break_after = value; }
+    void set_break_inside(BreakInside value) { m_noninherited.break_inside = value; }
     void set_z_index(Optional<int> value) { m_noninherited.z_index = move(value); }
     void set_tab_size(Variant<Length, double> value) { m_inherited.tab_size = move(value); }
     void set_text_align(TextAlign text_align) { m_inherited.text_align = text_align; }
@@ -1180,6 +1198,8 @@ public:
     void set_math_shift(MathShift value) { m_inherited.math_shift = value; }
     void set_math_style(MathStyle value) { m_inherited.math_style = value; }
     void set_math_depth(int value) { m_inherited.math_depth = value; }
+    void set_orphans(int value) { m_inherited.orphans = value; }
+    void set_widows(int value) { m_inherited.widows = value; }
 
     void set_scrollbar_color(ScrollbarColorData value) { m_inherited.scrollbar_color = move(value); }
     void set_scrollbar_width(ScrollbarWidth value) { m_noninherited.scrollbar_width = value; }

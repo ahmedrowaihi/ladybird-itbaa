@@ -121,6 +121,11 @@ public:
     Float float_() const;
     Color caret_color(Layout::NodeWithStyle const&) const;
     Clear clear() const;
+    BreakBefore break_before() const;
+    BreakAfter break_after() const;
+    BreakInside break_inside() const;
+    int orphans() const;
+    int widows() const;
     ColumnSpan column_span() const;
     struct ContentDataAndQuoteNestingLevel {
         ContentData content_data;

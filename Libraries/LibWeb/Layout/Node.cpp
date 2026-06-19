@@ -813,6 +813,9 @@ void NodeWithStyle::apply_style(CSS::ComputedProperties const& computed_style)
 
     computed_values.set_caption_side(computed_style.caption_side());
     computed_values.set_clear(computed_style.clear());
+    computed_values.set_break_before(computed_style.break_before());
+    computed_values.set_break_after(computed_style.break_after());
+    computed_values.set_break_inside(computed_style.break_inside());
     computed_values.set_overflow_x(computed_style.overflow_x());
     computed_values.set_overflow_y(computed_style.overflow_y());
     computed_values.set_content_visibility(computed_style.content_visibility());
@@ -1054,6 +1057,8 @@ void NodeWithStyle::apply_style(CSS::ComputedProperties const& computed_style)
         computed_values.set_math_style(math_style.value());
 
     computed_values.set_math_depth(computed_style.math_depth());
+    computed_values.set_orphans(computed_style.orphans());
+    computed_values.set_widows(computed_style.widows());
     computed_values.set_quotes(computed_style.quotes());
     computed_values.set_counter_increment(computed_style.counter_data(CSS::PropertyID::CounterIncrement));
     computed_values.set_counter_reset(computed_style.counter_data(CSS::PropertyID::CounterReset));

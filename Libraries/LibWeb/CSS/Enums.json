@@ -151,6 +151,43 @@
     "border-box",
     "content-box"
   ],
+  "break-after": [
+    "auto",
+    "avoid",
+    "avoid-page",
+    "avoid-column",
+    "avoid-region",
+    "page",
+    "left",
+    "right",
+    "recto",
+    "verso",
+    "column",
+    "region",
+    "always"
+  ],
+  "break-before": [
+    "auto",
+    "avoid",
+    "avoid-page",
+    "avoid-column",
+    "avoid-region",
+    "page",
+    "left",
+    "right",
+    "recto",
+    "verso",
+    "column",
+    "region",
+    "always"
+  ],
+  "break-inside": [
+    "auto",
+    "avoid",
+    "avoid-page",
+    "avoid-column",
+    "avoid-region"
+  ],
   "caption-side": [
     "top",
     "bottom"

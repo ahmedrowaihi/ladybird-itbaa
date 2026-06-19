@@ -1317,6 +1317,61 @@
       "box-sizing"
     ]
   },
+  "break-after": {
+    "animation-type": "discrete",
+    "inherited": false,
+    "initial": "auto",
+    "requires-computation": "never",
+    "valid-identifiers": [
+      "auto",
+      "avoid",
+      "avoid-page",
+      "avoid-column",
+      "avoid-region",
+      "page",
+      "left",
+      "right",
+      "recto",
+      "verso",
+      "column",
+      "region",
+      "always"
+    ]
+  },
+  "break-before": {
+    "animation-type": "discrete",
+    "inherited": false,
+    "initial": "auto",
+    "requires-computation": "never",
+    "valid-identifiers": [
+      "auto",
+      "avoid",
+      "avoid-page",
+      "avoid-column",
+      "avoid-region",
+      "page",
+      "left",
+      "right",
+      "recto",
+      "verso",
+      "column",
+      "region",
+      "always"
+    ]
+  },
+  "break-inside": {
+    "animation-type": "discrete",
+    "inherited": false,
+    "initial": "auto",
+    "requires-computation": "never",
+    "valid-identifiers": [
+      "auto",
+      "avoid",
+      "avoid-page",
+      "avoid-column",
+      "avoid-region"
+    ]
+  },
   "caption-side": {
     "animation-type": "discrete",
     "inherited": true,
@@ -3575,6 +3630,15 @@
       "unitless-length"
     ],
     "needs-layout-for-getcomputedstyle": true
+  },
+  "page-break-after": {
+    "legacy-alias-for": "break-after"
+  },
+  "page-break-before": {
+    "legacy-alias-for": "break-before"
+  },
+  "page-break-inside": {
+    "legacy-alias-for": "break-inside"
   },
   "paint-order": {
     "animation-type": "discrete",

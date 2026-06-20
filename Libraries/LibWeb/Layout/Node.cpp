@@ -816,6 +816,7 @@ void NodeWithStyle::apply_style(CSS::ComputedProperties const& computed_style)
     computed_values.set_break_before(computed_style.break_before());
     computed_values.set_break_after(computed_style.break_after());
     computed_values.set_break_inside(computed_style.break_inside());
+    computed_values.set_box_decoration_break(computed_style.box_decoration_break());
     computed_values.set_overflow_x(computed_style.overflow_x());
     computed_values.set_overflow_y(computed_style.overflow_y());
     computed_values.set_content_visibility(computed_style.content_visibility());

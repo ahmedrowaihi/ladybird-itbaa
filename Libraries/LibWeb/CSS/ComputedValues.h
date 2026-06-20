@@ -178,6 +178,7 @@ public:
     static BreakBefore break_before() { return BreakBefore::Auto; }
     static BreakAfter break_after() { return BreakAfter::Auto; }
     static BreakInside break_inside() { return BreakInside::Auto; }
+    static BoxDecorationBreak box_decoration_break() { return BoxDecorationBreak::Slice; }
     static Clip clip() { return Clip::make_auto(); }
     static ColorInterpolation color_interpolation() { return ColorInterpolation::Auto; }
     static PreferredColorScheme color_scheme() { return PreferredColorScheme::Auto; }
@@ -552,6 +553,7 @@ public:
     BreakBefore break_before() const { return m_noninherited.break_before; }
     BreakAfter break_after() const { return m_noninherited.break_after; }
     BreakInside break_inside() const { return m_noninherited.break_inside; }
+    BoxDecorationBreak box_decoration_break() const { return m_noninherited.box_decoration_break; }
     Clip clip() const { return m_noninherited.clip; }
     ColorInterpolation color_interpolation() const { return m_inherited.color_interpolation; }
     PreferredColorScheme color_scheme() const { return m_inherited.color_scheme; }
@@ -856,6 +858,7 @@ protected:
         BreakBefore break_before { InitialValues::break_before() };
         BreakAfter break_after { InitialValues::break_after() };
         BreakInside break_inside { InitialValues::break_inside() };
+        BoxDecorationBreak box_decoration_break { InitialValues::box_decoration_break() };
         TextOverflow text_overflow { InitialValues::text_overflow() };
         Positioning position { InitialValues::position() };
         Optional<FlyString> position_anchor { InitialValues::position_anchor() };
@@ -1022,6 +1025,7 @@ public:
     void set_break_before(BreakBefore value) { m_noninherited.break_before = value; }
     void set_break_after(BreakAfter value) { m_noninherited.break_after = value; }
     void set_break_inside(BreakInside value) { m_noninherited.break_inside = value; }
+    void set_box_decoration_break(BoxDecorationBreak value) { m_noninherited.box_decoration_break = value; }
     void set_z_index(Optional<int> value) { m_noninherited.z_index = move(value); }
     void set_tab_size(Variant<Length, double> value) { m_inherited.tab_size = move(value); }
     void set_text_align(TextAlign text_align) { m_inherited.text_align = text_align; }

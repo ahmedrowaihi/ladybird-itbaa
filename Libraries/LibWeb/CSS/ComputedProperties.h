@@ -124,6 +124,7 @@ public:
     BreakBefore break_before() const;
     BreakAfter break_after() const;
     BreakInside break_inside() const;
+    BoxDecorationBreak box_decoration_break() const;
     int orphans() const;
     int widows() const;
     ColumnSpan column_span() const;

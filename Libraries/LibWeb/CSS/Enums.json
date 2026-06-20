@@ -147,6 +147,10 @@
     "round",
     "space"
   ],
+  "box-decoration-break": [
+    "slice",
+    "clone"
+  ],
   "box-sizing": [
     "border-box",
     "content-box"

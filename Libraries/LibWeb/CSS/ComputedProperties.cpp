@@ -1143,6 +1143,11 @@ BreakInside ComputedProperties::break_inside() const
     return keyword_to_break_inside(property(PropertyID::BreakInside).to_keyword()).release_value();
 }
 
+BoxDecorationBreak ComputedProperties::box_decoration_break() const
+{
+    return keyword_to_box_decoration_break(property(PropertyID::BoxDecorationBreak).to_keyword()).release_value();
+}
+
 int ComputedProperties::orphans() const
 {
     return property(PropertyID::Orphans).as_integer().integer();

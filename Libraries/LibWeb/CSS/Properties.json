@@ -1296,6 +1296,17 @@
     ],
     "needs-layout-for-getcomputedstyle": true
   },
+  "box-decoration-break": {
+    "affects-layout": false,
+    "animation-type": "discrete",
+    "inherited": false,
+    "initial": "slice",
+    "requires-computation": "never",
+    "valid-identifiers": [
+      "slice",
+      "clone"
+    ]
+  },
   "box-shadow": {
     "affects-layout": false,
     "animation-type": "custom",

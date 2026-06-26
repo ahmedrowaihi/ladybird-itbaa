@@ -37,6 +37,9 @@ public:
     bool should_show_line_box_borders() const { return m_should_show_line_box_borders; }
     void set_should_show_line_box_borders(bool value) { m_should_show_line_box_borders = value; }
 
+    bool skip_paint_cache() const { return m_skip_paint_cache; }
+    void set_skip_paint_cache(bool value) { m_skip_paint_cache = value; }
+
     bool should_paint_overlay() const { return m_should_paint_overlay; }
     void set_should_paint_overlay(bool should_paint_overlay) { m_should_paint_overlay = should_paint_overlay; }
 
@@ -79,6 +82,7 @@ public:
         clone.m_device_viewport_rect = m_device_viewport_rect;
         clone.m_should_show_line_box_borders = m_should_show_line_box_borders;
         clone.m_should_paint_overlay = m_should_paint_overlay;
+        clone.m_skip_paint_cache = m_skip_paint_cache;
         return clone;
     }
 
@@ -115,6 +119,7 @@ private:
     DevicePixelRect m_device_viewport_rect;
     bool m_should_show_line_box_borders { false };
     bool m_should_paint_overlay { true };
+    bool m_skip_paint_cache { false };
     bool m_draw_svg_geometry_for_clip_path { false };
     Gfx::AffineTransform m_svg_transform;
     u64 m_paint_generation_id { 0 };

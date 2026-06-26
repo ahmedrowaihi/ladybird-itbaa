@@ -16,6 +16,7 @@ struct PaintConfig {
     bool should_show_line_box_borders { false };
     bool should_show_caret_hit_test_debug_overlay { false };
     Optional<Gfx::IntRect> canvas_fill_rect {};
+    bool skip_paint_cache { false };
 
     bool operator==(PaintConfig const& other) const = default;
 };

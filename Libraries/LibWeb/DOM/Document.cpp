@@ -8609,6 +8609,7 @@ RefPtr<Painting::DisplayList> Document::record_display_list(HTML::PaintConfig co
     context.set_device_viewport_rect(viewport_rect);
     context.set_should_show_line_box_borders(config.should_show_line_box_borders);
     context.set_should_paint_overlay(config.paint_overlay);
+    context.set_skip_paint_cache(config.skip_paint_cache);
 
     auto& viewport_paintable = *paintable();
     viewport_paintable.refresh_scroll_state();

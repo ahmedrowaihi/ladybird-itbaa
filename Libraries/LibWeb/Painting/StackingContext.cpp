@@ -44,7 +44,7 @@ static void paint_node(Paintable const& paintable, DisplayListRecordingContext& 
     if (paintable_box)
         paintable_box->record_hit_test_items(context, phase);
 
-    bool const skip_cache = !paintable_box || context.should_show_line_box_borders() || paintable_box->fixed_background_visual_context().has_value();
+    bool const skip_cache = !paintable_box || context.skip_paint_cache() || context.should_show_line_box_borders() || paintable_box->fixed_background_visual_context().has_value();
     if (!skip_cache && paintable_box->has_cached_commands(phase)) {
         context.display_list_recorder().replay_cached_commands(paintable_box->cached_commands(phase));
     } else if (!skip_cache) {
